@@ -35,7 +35,7 @@ jobs:
         run: yarn build
       
       - name: install Surge
-        run: napm install--global surge
+        run: npm install--global surge
         
       - name: Deploy to Surge
         run: surge ./build expense-budget.surge.sh --token ${{ secrets.BUDGET_TOKEN }}
