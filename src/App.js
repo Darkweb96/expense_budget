@@ -1,19 +1,21 @@
 import React from 'react';
+
+// Import CSS
 import './App.css';
 
-// Import the Global Provider
-import { GlobalProvider } from './context/GlobalState'
+// Import Components
+import { Header } from './components/Header';
+import { Balance } from './components/Balance';
+import { AccountSummary } from './components/AccountSummary';
+import { TransactionHistory } from './components/TransactionHistory';
+import { AddTransaction } from './components/AddTransaction';
 
-//import Components
-import { Header } from './components/Header'
-import { Balance } from './components/Balance'
-import { AccountSummary } from './components/AccountSummary'
-import { TransactionHistory } from './components/TransactionHistory'
-import { AddTransaction } from './components/AddTransaction'
+// Import Provider
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
-    <GlobalProvider> 
+      <GlobalProvider>
         <Header />
         <div className="container">
           <Balance />
@@ -21,7 +23,7 @@ function App() {
           <TransactionHistory />
           <AddTransaction />
         </div>
-    </GlobalProvider>
+      </GlobalProvider>
   );
 }
 

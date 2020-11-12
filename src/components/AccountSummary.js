@@ -1,6 +1,5 @@
 import React from 'react'
 
-// Import the Global State
 
 export const AccountSummary = () => {
 
